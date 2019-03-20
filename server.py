@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 app = Flask(__name__)
 file_path = "./sensor_data.csv"
-my_port = 17123
+my_port = 16043
 @app.route('/', methods=['GET'])
 def get_html():
     return render_template('./index.html')
