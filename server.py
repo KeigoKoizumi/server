@@ -6,26 +6,26 @@ my_port = 16043
 def get_html():
     return render_template('./index.html')
 
-@app.route('/lux', methods=['POST'])
-def update_lux():
+@app.route('/dust', methods=['POST'])
+def update_dust():
     time = request.form["time"]
-    lux = request.form["lux"]
+    lux = request.form["dust"]
     try:
         f = open(file_path, 'w')
-        f.write(time + "," + lux)
+        f.write(time + "," + dust)
         return "succeeded to write"
     except Exception as e:
         print(e)
         return "failed to write"
     finally:
         f.close()
-@app.route('/lux', methods=['GET'])
-def get_lux():
+@app.route('/dust', methods=['GET'])
+def get_dust():
     try:
         f = open(file_path, 'r')
         for row in f:
-            lux = row
-        return lux
+            dust = row
+        return dust
     except Exception as e:
         print(e)
         return e

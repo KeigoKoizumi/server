@@ -2,7 +2,7 @@
 <html>
   <head>
     <script>
-        const updateLux = async(url, element) => {
+        const updatedust = async(url, element) => {
         const sensorData = await fetch(url)
             .then(response => response.text())
         const target = document.getElementById(element)
@@ -11,9 +11,9 @@
   </script>
     </head>
     <center>
-    <body onLoad="updateLux('/lux', 'data')">
+    <body onLoad="updatedust('/dust', 'data')">
     <div id = "data">test</div>
-    <inPOST type="button" value="更新" onclick="updateLux('/lux', 'data')">
+    <inPOST type="button" value="更新" onclick="updatedust('/dust', 'data')">
     </body>
     </center>
 </html>
