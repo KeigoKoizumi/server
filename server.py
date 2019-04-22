@@ -9,7 +9,7 @@ def get_html():
 @app.route('/dust', methods=['POST'])
 def update_dust():
     time = request.form["time"]
-    lux = request.form["dust"]
+    dust = request.form["dust"]
     try:
         f = open(file_path, 'w')
         f.write(time + "," + dust)
