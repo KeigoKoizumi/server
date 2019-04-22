@@ -55,8 +55,7 @@ def update_dust():
     except Exception as e:
         print(e)
         return "failed to send email"
-    finally:
-        f.close()
+        
 @app.route('/dust', methods=['GET'])
 def get_dust():
     try:
