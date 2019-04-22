@@ -50,7 +50,7 @@ def update_dust():
 
         msg = create_message(FROM_ADDRESS, to_addr, BCC, subject, body)
         send(FROM_ADDRESS, to_addr, msg)
-        print "success"
+        print ("success")
         return "succeeded to send email"
     except Exception as e:
         print(e)
