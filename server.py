@@ -46,7 +46,7 @@ def update_dust():
     try:
         to_addr = TO_ADDRESS
         subject = SUBJECT
-        body =time+'・・・・・'+dust+message
+        body =time+'・・・・・'+dust
 
         msg = create_message(FROM_ADDRESS, to_addr, BCC, subject, body)
         send(FROM_ADDRESS, to_addr, msg)
