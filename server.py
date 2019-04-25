@@ -1,6 +1,7 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.utils import formatdate
+from flask import Flask, request, render_template
 
 FROM_ADDRESS ='dustdetection707@gmail.com'
 MY_PASSWORD ='3993lily'
@@ -29,9 +30,6 @@ def send(from_addr, to_addrs, msg):
     smtpobj.close()
 
 
-
-
-from flask import Flask, request, render_template
 app = Flask(__name__)
 file_path = "./sensor_data.csv"
 my_port = 16043
