@@ -43,10 +43,6 @@ def get_html():
 def update_dust():
     time = request.form["time"]
     dust = request.form["dust"]
-    if dust >80.0:
-        message ="少し埃っぽいです。掃除をしましょう。"
-    else:
-        message= "快適な状態です。これを保ちましょう。"
     try:
         to_addr = TO_ADDRESS
         subject = SUBJECT
